@@ -157,11 +157,11 @@ rm -rf tmp1.txt tmp2.txt tmp3.txt
 #--------------------合并所有城市的txt文件为:   zubo_fofa.txt-----------------------------------------
 
 echo "📡  广州频道,#genre#" >zubo_fofa.txt
-cat txt/Guangdong_103.txt >>zubo_fofa.txt
+cat txt/fofa_Guangdong_103.txt >>zubo_fofa.txt
 echo "📡  深圳频道,#genre#" >>zubo_fofa.txt
-cat txt/Guangdong_145.txt >>zubo_fofa.txt
+cat txt/fofa_Guangdong_145.txt >>zubo_fofa.txt
 echo "📡  广东频道,#genre#" >>zubo_fofa.txt
-cat txt/Guangdong_332.txt >>zubo_fofa.txt
+cat txt/fofa_Guangdong_332.txt >>zubo_fofa.txt
 
 
 for a in result/*.txt; do echo "";echo "========================= $(basename "$a") ==================================="; cat $a; done
