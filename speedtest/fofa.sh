@@ -139,8 +139,8 @@ rm -f zubo.tmp
 awk '/M|k/{print $2"  "$1}' "speedtest_${city}_$time.log" | sort -n -r >"result/result_fofa_${city}.txt"
 cat "result/result_fofa_${city}.txt"
 ip1=$(awk 'NR==1{print $2}' result/result_fofa_${city}.txt)
-ip2=$(awk 'NR==2{print $2}' result/result_fofa_${city}.txt)
-ip3=$(awk 'NR==3{print $2}' result/result_fofa_${city}.txt)
+#ip2=$(awk 'NR==2{print $2}' result/result_fofa_${city}.txt)
+#ip3=$(awk 'NR==3{print $2}' result/result_fofa_${city}.txt)
 rm -f "speedtest_${city}_$time.log"
 
 # 用 3 个最快 ip 生成对应城市的 txt 文件
