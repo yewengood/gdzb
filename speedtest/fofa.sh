@@ -65,7 +65,7 @@ case $city_choice in
         city="Guangdong_145"
         stream="rtp/239.0.1.1:5001"
         channel_key="广东联通"
-        url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http" && port="10250"' | base64 |tr -d '\n')
+        url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && port="10250"' | base64 |tr -d '\n')
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
     
