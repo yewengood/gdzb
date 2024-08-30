@@ -80,7 +80,7 @@ case $city_choice in
         city="Hunan_282"
         stream="udp/239.76.252.35:9000"
         channel_key="湖南电信"
-        url_fofa=$(echo  '"udpxy" && country="CN" && region="Hunan" && protocol="http"' | base64 |tr -d '\n')
+        url_fofa=$(echo  '"udpxy" && country="CN" && region="Hunan" && port="4022"' | base64 |tr -d '\n')
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
     6)
