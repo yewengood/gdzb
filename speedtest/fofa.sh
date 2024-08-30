@@ -185,10 +185,10 @@ cat txt/fofa_Guangdong_145.txt >>zubo_fofa.txt
 echo "📡  广东频道,#genre#" >>zubo_fofa.txt
 cat txt/fofa_Guangdong_332.txt >>zubo_fofa.txt
 echo "📡  四川频道,#genre#" >>zubo_fofa.txt
-cat txt/Sichuan_333.txt >>zubo_fofa.txt
+cat txt/fofa_Sichuan_333.txt >>zubo_fofa.txt
 echo "📡  湖南频道,#genre#" >>zubo_fofa.txt
-cat txt/Hunan_282.txt >>zubo_fofa.txt
+cat txt/fofa_Hunan_282.txt >>zubo_fofa.txt
 echo "📡  北京联通,#genre#" >>zubo_fofa.txt
-cat txt/Beijing_liantong_145.txt >>zubo_fofa.txt
+cat txt/fofa_Beijing_liantong_145.txt >>zubo_fofa.txt
 
 for a in result/*.txt; do echo "";echo "========================= $(basename "$a") ==================================="; cat $a; done
