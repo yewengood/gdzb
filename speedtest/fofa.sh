@@ -16,9 +16,9 @@ if [ $# -eq 0 ]; then
    echo "1. 广东电信（Guangdong_332）"
    echo "2. 广州移动（Guangdong_103）"
    echo "3. 深圳联通（Guangdong_145）"
-  # echo "3. 四川电信（Sichuan_333）"
-  # echo "4. 浙江电信（Zhejiang_120）"
-  # echo "5. 北京电信（Beijing_dianxin_186）"
+   echo "4. 四川电信（Sichuan_333）"
+    echo "5. 湖南电信（Hunan_282）"
+   echo "6. 北京联通（Beijing_liantong_145）"
   # echo "6. 江西（Jiangxi_105）"
   # echo "7. 江苏（Jiangsu）"
  
@@ -27,7 +27,7 @@ if [ $# -eq 0 ]; then
  #  echo "11. 天津联通（Tianjin_160）"
   # echo "12. 湖北电信（Hubei_90）"
   # echo "13. 福建电信（Fujian_114）"
- #  echo "14. 湖南电信（Hunan_282）"
+   # echo "4. 浙江电信（Zhejiang_120）"
  #  echo "15. 河北联通（Hebei_313）"
  #  echo "16. 重庆电信（Chongqing_161）" 
   # echo "17. 陕西（Sanxi_123）"
@@ -66,6 +66,28 @@ case $city_choice in
         stream="rtp/239.0.1.1:5001"
         channel_key="广东联通"
         url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && port="2222"' | base64 |tr -d '\n')
+        url_fofa="https://fofa.info/result?qbase64="$url_fofa
+        ;;
+    4)
+        city="Sichuan_333"
+        stream="udp/239.93.42.33:5140"
+        channel_key="四川电信"
+        url_fofa=$(echo  '"udpxy" && country="CN" && region="Sichuan" && org="CHINA UNICOM China169 Backbone"  && protocol="http"' | base64 |tr -d '\n')
+        url_fofa=$(echo  '"udpxy" && country="CN" && region="Sichuan" && protocol="http"' | base64 |tr -d '\n')
+        url_fofa="https://fofa.info/result?qbase64="$url_fofa
+        ;;
+   5)
+        city="Hunan_282"
+        stream="udp/239.76.252.35:9000"
+        channel_key="湖南电信"
+        url_fofa=$(echo  '"udpxy" && country="CN" && region="Hunan" && protocol="http"' | base64 |tr -d '\n')
+        url_fofa="https://fofa.info/result?qbase64="$url_fofa
+        ;;
+    6)
+        city="Beijing_liantong_145"
+        stream="rtp/239.3.1.236:2000"
+        channel_key="北京联通"
+        url_fofa=$(echo  '"udpxy" && country="CN" && region="Beijing" && org="China Unicom Beijing Province Network" && protocol="http"' | base64 |tr -d '\n')
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
     
@@ -162,6 +184,11 @@ echo "📡  深圳频道,#genre#" >>zubo_fofa.txt
 cat txt/fofa_Guangdong_145.txt >>zubo_fofa.txt
 echo "📡  广东频道,#genre#" >>zubo_fofa.txt
 cat txt/fofa_Guangdong_332.txt >>zubo_fofa.txt
-
+echo "📡  四川频道,#genre#" >>zubo_fofa.txt
+cat txt/Sichuan_333.txt >>zubo_fofa.txt
+echo "📡  湖南频道,#genre#" >>zubo_fofa.txt
+cat txt/Hunan_282.txt >>zubo_fofa.txt
+echo "📡  北京联通,#genre#" >>zubo_fofa.txt
+cat txt/Beijing_liantong_145.txt >>zubo_fofa.txt
 
 for a in result/*.txt; do echo "";echo "========================= $(basename "$a") ==================================="; cat $a; done
