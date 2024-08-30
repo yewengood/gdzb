@@ -1,0 +1,47 @@
+爱上4K[超清],http://ipipip/rtp/239.3.1.236:2000
+4K超清[超清],http://ipipip/rtp/239.3.1.249:8001
+淘电影HD,http://ipipip/rtp/239.3.1.250:8001
+每日影院HD,http://ipipip/# rtp/239.3.1.111:8001
+星影,http://ipipip/rtp/239.3.1.94:4120
+动作影院,http://ipipip/rtp/239.3.1.92:4120
+光影,http://ipipip/rtp/239.3.1.84:4120
+喜剧影院,http://ipipip/rtp/239.3.1.91:4120
+家庭影院,http://ipipip/rtp/239.3.1.93:4120
+经典电影,http://ipipip/rtp/239.3.1.195:9024
+纪实人文HD,http://ipipip/rtp/239.3.1.212:8060
+金鹰纪实HD,http://ipipip/rtp/239.3.1.58:8156
+风尚生活HD,http://ipipip/# rtp/239.3.1.114:8001
+地理,http://ipipip/rtp/239.3.1.71:4120
+淘剧场HD,http://ipipip/rtp/239.3.1.95:8001
+幸福剧场HD,http://ipipip/# rtp/239.3.1.112:8001
+淘娱乐HD,http://ipipip/rtp/239.3.1.100:8001
+幸福娱乐HD,http://ipipip/# rtp/239.3.1.113:8001
+淘BabyHD,http://ipipip/rtp/239.3.1.238:8001
+萌宠TVHD,http://ipipip/rtp/239.3.1.102:8001
+中国交通HD,http://ipipip/rtp/239.3.1.188:8001
+少儿动画,http://ipipip/rtp/239.3.1.199:9000
+热播剧场,http://ipipip/rtp/239.3.1.194:9020
+解密,http://ipipip/rtp/239.3.1.75:4120
+军事,http://ipipip/rtp/239.3.1.76:4120
+军旅剧场,http://ipipip/rtp/239.3.1.68:4120
+动画,http://ipipip/rtp/239.3.1.80:4120
+古装剧场,http://ipipip/rtp/239.3.1.69:4120
+台球,http://ipipip/rtp/239.3.1.85:4120
+国学,http://ipipip/rtp/239.3.1.77:4120
+城市剧场,http://ipipip/rtp/239.3.1.67:4120
+墨宝,http://ipipip/rtp/239.3.1.83:4120
+好学生,http://ipipip/rtp/239.3.1.81:4120
+戏曲,http://ipipip/rtp/239.3.1.78:4120
+早教,http://ipipip/rtp/239.3.1.79:4120
+武侠剧场,http://ipipip/rtp/239.3.1.90:4120
+武术,http://ipipip/rtp/239.3.1.87:4120
+爱生活,http://ipipip/rtp/239.3.1.86:4120
+美人,http://ipipip/rtp/239.3.1.73:4120
+美妆,http://ipipip/rtp/239.3.1.72:4120
+财富天下,http://ipipip/rtp/239.3.1.53:9136
+足球,http://ipipip/rtp/239.3.1.89:4120
+金鹰卡通,http://ipipip/rtp/239.3.1.51:9252
+鉴赏,http://ipipip/rtp/239.3.1.82:4120
+音乐现场,http://ipipip/rtp/239.3.1.70:4120
+高网,http://ipipip/rtp/239.3.1.88:4120
+魅力时尚,http://ipipip/rtp/239.3.1.196:9012
