@@ -177,13 +177,12 @@ rm -rf tmp1.txt tmp2.txt tmp3.txt
 
 
 #--------------------合并所有城市的txt文件为:   zubo_fofa.txt-----------------------------------------
-
+echo "📡  广东频道,#genre#" >>zubo_fofa.txt
+cat txt/fofa_Guangdong_332.txt >>zubo_fofa.txt
 echo "📡  广州频道,#genre#" >zubo_fofa.txt
 cat txt/fofa_Guangdong_103.txt >>zubo_fofa.txt
 echo "📡  深圳频道,#genre#" >>zubo_fofa.txt
 cat txt/fofa_Guangdong_145.txt >>zubo_fofa.txt
-echo "📡  广东频道,#genre#" >>zubo_fofa.txt
-cat txt/fofa_Guangdong_332.txt >>zubo_fofa.txt
 echo "📡  四川频道,#genre#" >>zubo_fofa.txt
 cat txt/fofa_Sichuan_333.txt >>zubo_fofa.txt
 echo "📡  湖南频道,#genre#" >>zubo_fofa.txt
