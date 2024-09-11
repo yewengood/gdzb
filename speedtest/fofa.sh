@@ -17,7 +17,7 @@ if [ $# -eq 0 ]; then
    echo "2. 广州移动（Guangdong_103）"
    echo "3. 深圳联通（Guangdong_145）"
    echo "4. 四川电信（Sichuan_333）"
-    echo "5. 湖南电信（Hunan_282）"
+    #echo "5. 湖南电信（Hunan_282）"
    echo "6. 北京联通（Beijing_liantong_145）"
   # echo "6. 江西（Jiangxi_105）"
   # echo "7. 江苏（Jiangsu）"
