@@ -175,7 +175,7 @@ cat tmp1.txt tmp2.txt tmp3.txt > "txt/fofa_${city}.txt"
 
 rm -rf tmp1.txt tmp2.txt tmp3.txt
 
-
+rm -rf zubo_fofa.txt
 #--------------------合并所有城市的txt文件为:   zubo_fofa.txt-----------------------------------------
 echo "📡  广东频道,#genre#" >>zubo_fofa.txt
 cat txt/fofa_Guangdong_332.txt >>zubo_fofa.txt
