@@ -184,9 +184,9 @@ cat txt/fofa_Guangdong_103.txt >>zubo_fofa.txt
 echo "📡  深圳频道,#genre#" >>zubo_fofa.txt
 cat txt/fofa_Guangdong_145.txt >>zubo_fofa.txt
 echo "📡  四川频道,#genre#" >>zubo_fofa.txt
-#cat txt/fofa_Sichuan_333.txt >>zubo_fofa.txt
+cat txt/fofa_Sichuan_333.txt >>zubo_fofa.txt
 #echo "📡  湖南频道,#genre#" >>zubo_fofa.txt
-cat txt/fofa_Hunan_282.txt >>zubo_fofa.txt
+#cat txt/fofa_Hunan_282.txt >>zubo_fofa.txt
 echo "📡  北京联通,#genre#" >>zubo_fofa.txt
 cat txt/fofa_Beijing_liantong_145.txt >>zubo_fofa.txt
 
