@@ -7,6 +7,8 @@
 #     echo "脚本已取消."
 #     exit 0
 # fi
+rm -rf ip/Guangdong_332.onlygood.ip
+rm -rf ip/liantong1.onlygood.ip
 time=$(date +%m%d%H%M)
 i=0
 
@@ -135,8 +137,7 @@ case $city_choice in
         ;;
 esac
 
-rm -rf ip/Guangdong_332.onlygood.ip
-rm -rf ip/liantong1.onlygood.ip
+
 
 # 使用城市名作为默认文件名，格式为 CityName.ip
 ipfile="ip/${city}.ip"
