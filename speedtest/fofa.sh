@@ -19,8 +19,8 @@ if [ $# -eq 0 ]; then
    echo "4. 四川电信（Sichuan_333）"
     #echo "5. 湖南电信（Hunan_282）"
    echo "6. 北京联通（Beijing_liantong_145）"
-  # echo "6. 江西（Jiangxi_105）"
-  # echo "7. 江苏（Jiangsu）"
+   echo "7. 联通1（liantong1）"
+  echo "8. 联通2（liantong2）"
  
   # echo "9. 河南电信（Henan_327）"
   # echo "10. 山西电信（Shanxi_117）"
@@ -88,6 +88,20 @@ case $city_choice in
         stream="rtp/239.3.1.236:2000"
         channel_key="北京联通"
         url_fofa=$(echo  '"udpxy" && country="CN" && region="Beijing" && org="China Unicom Beijing Province Network" && protocol="http"' | base64 |tr -d '\n')
+        url_fofa="https://fofa.info/result?qbase64="$url_fofa
+        ;;
+	  7)
+        city="liantong1"
+        stream="rtp/239.0.1.133:5172"
+        channel_key="联通1"
+        url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http" && port="10250"' | base64 |tr -d '\n')
+        url_fofa="https://fofa.info/result?qbase64="$url_fofa
+        ;;
+	 8)
+        city="liantong2"
+        stream="rtp/239.0.1.133:5172"
+        channel_key="联通2"
+        url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http" && port="2222"' | base64 |tr -d '\n')
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
     
