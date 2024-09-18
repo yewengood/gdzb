@@ -8,6 +8,8 @@
 #     exit 0
 # fi
 
+rm -rf ip/Guangdong_332.onlygood.ip
+rm -rf ip/liantong1.onlygood.ip
 time=$(date +%m%d%H%M)
 i=0
 
