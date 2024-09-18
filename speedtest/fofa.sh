@@ -51,8 +51,10 @@ case $city_choice in
         city="Guangdong_332"
         stream="udp/239.77.1.98:5146"
         channel_key="广东电信"
-        url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http" && "udpxy" && country="CN" && region="Guangdong" && protocol="http" && port="8888" && "udpxy" && country="CN" && region="Guangdong" && protocol="http" && port="10000"' | base64 |tr -d '\n')
-        url_fofa="https://fofa.info/result?qbase64="$url_fofa
+        url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http"' | base64 |tr -d '\n')
+        url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http" && port="8888"' | base64 |tr -d '\n')
+	url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http" && port="10000"' | base64 |tr -d '\n')
+	url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
     2)
         city="Guangdong_103"
@@ -95,6 +97,7 @@ case $city_choice in
         stream="rtp/239.0.1.133:5172"
         channel_key="联通1"
         url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http" && port="10250"' | base64 |tr -d '\n')
+	url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http" && port="2222"' | base64 |tr -d '\n')
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
 	 8)
