@@ -14,13 +14,15 @@ i=0
 if [ $# -eq 0 ]; then
   echo "请选择城市："
    echo "1. 广东电信（Guangdong_332）"
-   echo "2. 广州移动（Guangdong_103）"
-   echo "3. 深圳联通（Guangdong_145）"
-   echo "4. 四川电信（Sichuan_333）"
+  echo "2. 电信1（dianxin1）"
+   echo "3. 电信2（dianxin2）"
+   echo "4. 广州移动（Guangdong_103）"
+   echo "5. 深圳联通（Guangdong_145）"
+   echo "6. 四川电信（Sichuan_333）"
     #echo "5. 湖南电信（Hunan_282）"
-   echo "6. 北京联通（Beijing_liantong_145）"
-   echo "7. 联通1（liantong1）"
-  echo "8. 联通2（liantong2）"
+   echo "7. 北京联通（Beijing_liantong_145）"
+   echo "8. 联通1（liantong1）"
+  echo "9. 联通2（liantong2）"
  
   # echo "9. 河南电信（Henan_327）"
   # echo "10. 山西电信（Shanxi_117）"
@@ -56,6 +58,21 @@ case $city_choice in
 	#url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http" && port="10000"' | base64 |tr -d '\n')
 	url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
+ 2)
+        city="dianxin1"
+        stream="udp/239.77.1.98:5146"
+        channel_key="电信1"
+        url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http" && port="8888"' | base64 |tr -d '\n')
+	url_fofa="https://fofa.info/result?qbase64="$url_fofa
+        ;;
+  3)
+        city="dianxin2"
+        stream="udp/239.77.1.98:5146"
+        channel_key="电信2"
+	url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http" && port="4022"' | base64 |tr -d '\n')
+	url_fofa="https://fofa.info/result?qbase64="$url_fofa
+        ;;
+	
     2)
         city="Guangdong_103"
         stream="udp/239.10.0.63:1025"
@@ -152,6 +169,12 @@ echo " " >>ip/liantong1.onlygood.ip
 cat ip/liantong1.onlygood.ip >>ip/liantong1.onlygood.ip
 echo " " >>ip/liantong1.onlygood.ip
 cat ip/liantong2.onlygood.ip >>ip/liantong1.onlygood.ip
+echo " " >>ip/Guangdong_332.onlygood.ip
+cat ip/Guangdong_332.onlygood.ip >>ip/Guangdong_332.onlygood.ip
+echo " " >>ip/Guangdong_332.onlygood.ip
+cat ip/dianxin1.onlygood.ip >>ip/Guangdong_332.onlygood.ip
+echo " " >>ip/Guangdong_332.onlygood.ip
+cat ip/dianxin2.onlygood.ip >>ip/Guangdong_332.onlygood.ip
 
 echo "===============检索完成================="
 
