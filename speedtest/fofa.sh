@@ -52,8 +52,8 @@ case $city_choice in
         stream="udp/239.77.1.98:5146"
         channel_key="广东电信"
         url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http"' | base64 |tr -d '\n')
-        url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http" && port="8888"' | base64 |tr -d '\n')
-	url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http" && port="10000"' | base64 |tr -d '\n')
+        #url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http" && port="8888"' | base64 |tr -d '\n')
+	#url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http" && port="10000"' | base64 |tr -d '\n')
 	url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
     2)
@@ -97,7 +97,6 @@ case $city_choice in
         stream="rtp/239.0.1.133:5172"
         channel_key="联通1"
         url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http" && port="10250"' | base64 |tr -d '\n')
-	url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http" && port="2222"' | base64 |tr -d '\n')
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
 	 8)
@@ -148,6 +147,11 @@ while IFS= read -r ip; do
         echo "$output" | grep "succeeded" | awk -v ip="$ip" '{print ip}' >> "$only_good_ip"
     fi
 done < "$ipfile"
+
+echo " " >>ip/liantong1.onlygood.ip
+cat ip/liantong1.onlygood.ip >>ip/liantong1.onlygood.ip
+echo " " >>ip/liantong1.onlygood.ip
+cat ip/liantong2.onlygood.ip >>ip/liantong1.onlygood.ip
 
 echo "===============检索完成================="
 
