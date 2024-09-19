@@ -9,6 +9,7 @@
 # fi
 rm -rf ip/Guangdong_332.onlygood.ip
 rm -rf ip/liantong1.onlygood.ip
+rm -rf ip/Guangdong_103.onlygood.ip
 time=$(date +%m%d%H%M)
 i=0
 
@@ -122,6 +123,13 @@ case $city_choice in
         url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http" && port="2222"' | base64 |tr -d '\n')
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
+    10)
+        city="yidong1"
+        stream="udp/239.77.1.132:5146"
+	channel_key="移动1"
+        url_fofa=$(echo  'server="udpxy 1.0-25.0 (prod) standard [Linux 5.10.194 x86_64]" && country="CN" && region="Guangdong" && org="China Mobile Communications Group Co., Ltd."' | base64 |tr -d '\n')
+        url_fofa="https://fofa.info/result?qbase64="$url_fofa
+        ;;
     
     0)
         # 如果选择是“全部选项”，则逐个处理每个选项
@@ -168,12 +176,19 @@ echo " " >>ip/liantong1.onlygood.ip
 cat ip/liantong1.onlygood.ip >>ip/liantong1.onlygood.ip
 echo " " >>ip/liantong1.onlygood.ip
 cat ip/liantong2.onlygood.ip >>ip/liantong1.onlygood.ip
+
 echo " " >>ip/Guangdong_332.onlygood.ip
 cat ip/Guangdong_332.onlygood.ip >>ip/Guangdong_332.onlygood.ip
 echo " " >>ip/Guangdong_332.onlygood.ip
 cat ip/dianxin1.onlygood.ip >>ip/Guangdong_332.onlygood.ip
 echo " " >>ip/Guangdong_332.onlygood.ip
 cat ip/dianxin2.onlygood.ip >>ip/Guangdong_332.onlygood.ip
+
+echo " " >>ip/Guangdong_103.onlygood.ip
+cat ip/yidong1.onlygood.ip >>ip/Guangdong_103.onlygood.ip
+echo " " >>ip/Guangdong_103.onlygood.ip
+cat ip/yidong1.onlygood.ip >>ip/Guangdong_103.onlygood.ip
+
 
 echo "===============检索完成================="
 
