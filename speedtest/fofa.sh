@@ -8,7 +8,6 @@
 #     exit 0
 # fi
 rm -rf ip/Guangdong_332.onlygood.ip
-rm -rf ip/liantong1.onlygood.ip
 rm -rf ip/Guangdong_103.onlygood.ip
 time=$(date +%m%d%H%M)
 i=0
@@ -23,9 +22,9 @@ if [ $# -eq 0 ]; then
    echo "6. 四川电信（Sichuan_333）"
     #echo "5. 湖南电信（Hunan_282）"
    echo "7. 北京联通（Beijing_liantong_145）"
-   echo "8. 联通1（liantong1）"
-  echo "9. 联通2（liantong2）"
-  echo "10. 移动1（yidong1）"
+  # echo "8. 联通1（liantong1）"
+  #echo "9. 联通2（liantong2）"
+  echo "8. 移动1（yidong1）"
  
   # echo "9. 河南电信（Henan_327）"
   # echo "10. 山西电信（Shanxi_117）"
@@ -103,21 +102,8 @@ case $city_choice in
         url_fofa=$(echo  '"udpxy" && country="CN" && region="Beijing" && org="China Unicom Beijing Province Network" && protocol="http"' | base64 |tr -d '\n')
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
-	  8)
-        city="liantong1"
-        stream="rtp/239.0.1.133:5172"
-        channel_key="联通1"
-        url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http" && port="10250"' | base64 |tr -d '\n')
-        url_fofa="https://fofa.info/result?qbase64="$url_fofa
-        ;;
- 9)
-        city="liantong2"
-        stream="rtp/239.0.1.133:5172"
-        channel_key="联通2"
-        url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http" && port="2222"' | base64 |tr -d '\n')
-        url_fofa="https://fofa.info/result?qbase64="$url_fofa
-        ;;
-    10)
+
+    8)
         city="yidong1"
         stream="udp/239.77.1.132:5146"
 	channel_key="移动1"
@@ -165,12 +151,6 @@ while IFS= read -r ip; do
         echo "$output" | grep "succeeded" | awk -v ip="$ip" '{print ip}' >> "$only_good_ip"
     fi
 done < "$ipfile"
-
-echo " " >>ip/liantong1.onlygood.ip
-cat ip/liantong1.onlygood.ip >>ip/liantong1.onlygood.ip
-echo " " >>ip/liantong1.onlygood.ip
-cat ip/liantong2.onlygood.ip >>ip/liantong1.onlygood.ip
-
 echo " " >>ip/Guangdong_332.onlygood.ip
 cat ip/Guangdong_332.onlygood.ip >>ip/Guangdong_332.onlygood.ip
 echo " " >>ip/Guangdong_332.onlygood.ip
@@ -229,8 +209,8 @@ rm -rf tmp1.txt tmp2.txt tmp3.txt
 
 rm -rf zubo_fofa.txt
 #--------------------合并所有城市的txt文件为:   zubo_fofa.txt-----------------------------------------
-echo "📡  联通1,#genre#" >>zubo_fofa.txt
-cat txt/fofa_liantong1.txt >>zubo_fofa.txt
+echo "📡  联通,#genre#" >>zubo_fofa.txt
+cat txt/fofa_liantong.txt >>zubo_fofa.txt
 echo "📡  广东频道,#genre#" >>zubo_fofa.txt
 cat txt/fofa_Guangdong_332.txt >>zubo_fofa.txt
 echo "📡  广州频道,#genre#" >>zubo_fofa.txt
