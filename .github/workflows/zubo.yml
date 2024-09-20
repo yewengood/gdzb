@@ -20,9 +20,12 @@ jobs:
       
     - name: Run Multitest Script
       #working-directory: zubo/speedtest
-      run: |
+     # run: |
         cd $GITHUB_WORKSPACE/speedtest
         bash ./fofa.sh
+      run: |
+        cd $GITHUB_WORKSPACE/speedtest
+        bash ./tv.sh 
     - name: Update Results
       run: |
         cd $GITHUB_WORKSPACE/speedtest
