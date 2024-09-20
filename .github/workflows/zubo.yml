@@ -17,12 +17,12 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y yt-dlp sed nmap
-      
+        
     - name: Run Multitest Script
       #working-directory: zubo/speedtest
      # run: |
-        cd $GITHUB_WORKSPACE/speedtest
-        bash ./fofa.sh
+      #  cd $GITHUB_WORKSPACE/speedtest
+      #  bash ./fofa.sh
       run: |
         cd $GITHUB_WORKSPACE/speedtest
         bash ./tv.sh 
