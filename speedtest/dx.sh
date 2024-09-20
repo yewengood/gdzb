@@ -1,4 +1,4 @@
-rm -rf ip/liantong.onlygood.ip
+rm -rf ip/dianxin.onlygood.ip
 city="dianxin"
 # 使用城市名作为默认文件名，格式为 CityName.ip
 ipfile="ip/${city}.ip"
