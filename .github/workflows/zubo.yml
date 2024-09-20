@@ -23,7 +23,7 @@ jobs:
       run: |
        cd $GITHUB_WORKSPACE/speedtest
         bash ./tv.sh
-      run: |
+        
         cd $GITHUB_WORKSPACE/speedtest
         bash ./fofa.sh 
     - name: Update Results
