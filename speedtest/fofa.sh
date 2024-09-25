@@ -18,25 +18,9 @@ if [ $# -eq 0 ]; then
   echo "2. 电信1（dianxin1）"
    echo "3. 电信2（dianxin2）"
    echo "4. 广州移动（Guangdong_103）"
-   echo "5. 深圳联通（Guangdong_145）"
-   echo "6. 四川电信（Sichuan_333）"
-    #echo "5. 湖南电信（Hunan_282）"
-   echo "7. 北京联通（Beijing_liantong_145）"
-  # echo "8. 联通1（liantong1）"
-  #echo "9. 联通2（liantong2）"
-  echo "8. 移动1（yidong1）"
- 
-  # echo "9. 河南电信（Henan_327）"
-  # echo "10. 山西电信（Shanxi_117）"
- #  echo "11. 天津联通（Tianjin_160）"
-  # echo "12. 湖北电信（Hubei_90）"
-  # echo "13. 福建电信（Fujian_114）"
-   # echo "4. 浙江电信（Zhejiang_120）"
- #  echo "15. 河北联通（Hebei_313）"
- #  echo "16. 重庆电信（Chongqing_161）" 
-  # echo "17. 陕西（Sanxi_123）"
-  # echo "18. 广西（Guangxi_163）"
-  # echo "19. 安徽（Anhui_191）"
+   echo "5. 四川电信（Sichuan_333）"
+   echo "6. 北京联通（Beijing_liantong_145）"
+  echo "7. 移动1（yidong1）"
   echo "0. 全部"
   read -t 10 -p "输入选择或在10秒内无输入将默认选择全部: " city_choice
 
@@ -80,14 +64,8 @@ case $city_choice in
         url_fofa=$(echo  'server="udpxy 1.0-25.0 (prod) standard [Linux 5.10.194 x86_64]" && country="CN" && region="Guangdong"' | base64 |tr -d '\n')
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
+
     5)
-        city="Guangdong_145"
-        stream="rtp/239.20.0.64:3144"
-        channel_key="广东联通"
-        url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http" && org="China Mobile communications corporation"' | base64 |tr -d '\n')
-        url_fofa="https://fofa.info/result?qbase64="$url_fofa
-        ;;
-    6)
         city="Sichuan_333"
         stream="udp/239.93.42.33:5140"
         channel_key="四川电信"
@@ -95,7 +73,7 @@ case $city_choice in
         url_fofa=$(echo  '"udpxy" && country="CN" && region="Sichuan" && protocol="http"' | base64 |tr -d '\n')
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
-    7)
+    6)
         city="Beijing_liantong_145"
         stream="rtp/239.3.1.236:2000"
         channel_key="北京联通"
@@ -103,7 +81,7 @@ case $city_choice in
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
 
-    8)
+    7)
         city="yidong1"
         stream="udp/239.77.1.132:5146"
 	channel_key="移动1"
@@ -215,8 +193,6 @@ echo "📡  广州频道,#genre#" >>zubo_fofa.txt
 cat txt/fofa_Guangdong_103.txt >>zubo_fofa.txt
 echo "📡  广东频道,#genre#" >>zubo_fofa.txt
 cat txt/fofa_Guangdong_332.txt >>zubo_fofa.txt
-echo "📡  深圳频道,#genre#" >>zubo_fofa.txt
-cat txt/fofa_Guangdong_145.txt >>zubo_fofa.txt
 echo "📡  四川频道,#genre#" >>zubo_fofa.txt
 cat txt/fofa_Sichuan_333.txt >>zubo_fofa.txt
 echo "📡  北京联通,#genre#" >>zubo_fofa.txt
