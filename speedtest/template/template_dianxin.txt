@@ -14,14 +14,12 @@
 广东影视高清,http://ipipip/udp/239.77.0.217:5146
 广东少儿高清,http://ipipip/udp/239.77.0.250:5146
 嘉佳卡通高清,http://ipipip/udp/239.77.0.179:5146
-南方购物-精选,http://ipipip/udp/239.77.0.19:5146
-南方购物,http://ipipip/udp/239.77.0.22:5146
-广东综艺 4K50p,http://ipipip/udp/239.77.1.236:5146
-广州综合,http://ipipip/udp/239.253.43.71:5146
-广州影视,http://ipipip/udp/239.253.43.73:5146
-广州新闻,http://ipipip/udp/239.253.43.72:5146
-广州法治,http://ipipip/udp/239.253.43.74:5146
-广州南国都市,http://ipipip/udp/239.253.43.99:5146
+广东综艺4K,http://ipipip/udp/239.77.1.236:5146
+广州综合高清,http://ipipip/udp/239.253.43.71:5146
+广州影视高清,http://ipipip/udp/239.253.43.73:5146
+广州新闻高清,http://ipipip/udp/239.253.43.72:5146
+广州法治高清,http://ipipip/udp/239.253.43.74:5146
+南国都市4K,http://ipipip/udp/239.253.43.99:5146
 CCTV-1,http://ipipip/udp/239.77.1.17:5146
 CCTV-1,http://ipipip/udp/239.77.1.144:5146
 CCTV-1,http://ipipip/udp/239.77.0.86:5146
