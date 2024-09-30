@@ -63,10 +63,10 @@ CCTV14测试,http://ipipip/udp/239.77.0.133:5146
 CCTV15,http://ipipip/udp/239.77.1.239:5146
 CCTV16,http://ipipip/udp/239.77.0.165:5146
 CCTV16,http://ipipip/udp/239.77.1.76:5146
-CCTV16-4K,http://ipipip/udp/239.77.1.98:5146
+CCTV16 4K,http://ipipip/udp/239.77.1.98:5146
 CCTV17,http://ipipip/udp/239.77.1.121:5146
-CCTV4K-4K,http://ipipip/udp/239.77.0.194:5146
-CCTV4K-4K50p,http://ipipip/udp/239.77.0.174:5146
+CCTV4K 4K,http://ipipip/udp/239.77.0.194:5146
+CCTV4K 4K50p,http://ipipip/udp/239.77.0.174:5146
 CGTN,http://ipipip/udp/239.77.0.45:5146
 CGTN,http://ipipip/udp/239.77.1.27:5146
 CGTN英语,http://ipipip/udp/239.77.0.199:5146
