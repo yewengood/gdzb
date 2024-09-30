@@ -7,20 +7,14 @@
 #     echo "脚本已取消."
 #     exit 0
 # fi
-rm -rf ip/Guangdong_332.onlygood.ip
-rm -rf ip/Guangdong_103.onlygood.ip
+
 time=$(date +%m%d%H%M)
 i=0
 
 if [ $# -eq 0 ]; then
   echo "请选择城市："
-   echo "1. 广东电信（Guangdong_332）"
-  echo "2. 电信1（dianxin1）"
-   echo "3. 电信2（dianxin2）"
-   echo "4. 广州移动（Guangdong_103）"
-   echo "5. 四川电信（Sichuan_333）"
-   echo "6. 北京联通（Beijing_liantong_145）"
-  echo "7. 移动1（yidong1）"
+   echo "1. 四川电信（Sichuan_333）"
+   echo "2. 北京联通（Beijing_liantong_145）"
   echo "0. 全部"
   read -t 10 -p "输入选择或在10秒内无输入将默认选择全部: " city_choice
 
@@ -35,37 +29,8 @@ fi
 
 # 根据用户选择设置城市和相应的stream
 case $city_choice in
-    1)
-        city="Guangdong_332"
-        stream="udp/239.77.1.98:5146"
-        channel_key="广东电信"
-        url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http"' | base64 |tr -d '\n')
-	url_fofa="https://fofa.info/result?qbase64="$url_fofa
-        ;;
- 2)
-        city="dianxin1"
-        stream="udp/239.77.1.98:5146"
-        channel_key="电信1"
-        url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http" && org="Chinanet" && city="Guangzhou"' | base64 |tr -d '\n')
-	url_fofa="https://fofa.info/result?qbase64="$url_fofa
-        ;;
-  3)
-        city="dianxin2"
-        stream="udp/239.77.1.98:5146"
-        channel_key="电信2"
-	url_fofa=$(echo  '"udpxy" && country="CN" && region="Guangdong" && protocol="http" && org="Chinanet" && city="Shenzhen"' | base64 |tr -d '\n')
-	url_fofa="https://fofa.info/result?qbase64="$url_fofa
-        ;;
-	
-    4)
-        city="Guangdong_103"
-        stream="udp/239.77.1.132:5146"
-	channel_key="广东移动"
-        url_fofa=$(echo  'server="udpxy 1.0-25.0 (prod) standard [Linux 5.10.194 x86_64]" && country="CN" && region="Guangdong"' | base64 |tr -d '\n')
-        url_fofa="https://fofa.info/result?qbase64="$url_fofa
-        ;;
-
-    5)
+   
+   1)
         city="Sichuan_333"
         stream="udp/239.93.42.33:5140"
         channel_key="四川电信"
@@ -73,7 +38,7 @@ case $city_choice in
         url_fofa=$(echo  '"udpxy" && country="CN" && region="Sichuan" && protocol="http"' | base64 |tr -d '\n')
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
-    6)
+    2)
         city="Beijing_liantong_145"
         stream="rtp/239.3.1.236:2000"
         channel_key="北京联通"
@@ -81,14 +46,6 @@ case $city_choice in
         url_fofa="https://fofa.info/result?qbase64="$url_fofa
         ;;
 
-    7)
-        city="yidong1"
-        stream="udp/239.77.1.132:5146"
-	channel_key="移动1"
-        url_fofa=$(echo  'server="udpxy 1.0-25.0 (prod) standard [Linux 5.10.194 x86_64]" && country="CN" && region="Guangdong" && org="China Mobile Communications Group Co., Ltd."' | base64 |tr -d '\n')
-        url_fofa="https://fofa.info/result?qbase64="$url_fofa
-        ;;
-    
     0)
         # 如果选择是“全部选项”，则逐个处理每个选项
         for option in {1..19}; do
@@ -129,18 +86,6 @@ while IFS= read -r ip; do
         echo "$output" | grep "succeeded" | awk -v ip="$ip" '{print ip}' >> "$only_good_ip"
     fi
 done < "$ipfile"
-echo " " >>ip/Guangdong_332.onlygood.ip
-cat ip/Guangdong_332.onlygood.ip >>ip/Guangdong_332.onlygood.ip
-echo " " >>ip/Guangdong_332.onlygood.ip
-cat ip/dianxin1.onlygood.ip >>ip/Guangdong_332.onlygood.ip
-echo " " >>ip/Guangdong_332.onlygood.ip
-cat ip/dianxin2.onlygood.ip >>ip/Guangdong_332.onlygood.ip
-
-echo " " >>ip/Guangdong_103.onlygood.ip
-cat ip/yidong1.onlygood.ip >>ip/Guangdong_103.onlygood.ip
-echo " " >>ip/Guangdong_103.onlygood.ip
-cat ip/yidong1.onlygood.ip >>ip/Guangdong_103.onlygood.ip
-
 
 echo "===============检索完成================="
 
@@ -187,12 +132,7 @@ rm -rf tmp1.txt tmp2.txt tmp3.txt
 
 rm -rf zubo_fofa.txt
 #--------------------合并所有城市的txt文件为:   zubo_fofa.txt-----------------------------------------
-echo "📡  电信频道,#genre#" >>zubo_fofa.txt
-cat txt/fofa_dianxin.txt >>zubo_fofa.txt
-echo "📡  广州频道,#genre#" >>zubo_fofa.txt
-cat txt/fofa_Guangdong_103.txt >>zubo_fofa.txt
-echo "📡  广东频道,#genre#" >>zubo_fofa.txt
-cat txt/fofa_Guangdong_332.txt >>zubo_fofa.txt
+
 echo "📡  四川频道,#genre#" >>zubo_fofa.txt
 cat txt/fofa_Sichuan_333.txt >>zubo_fofa.txt
 echo "📡  北京联通,#genre#" >>zubo_fofa.txt
