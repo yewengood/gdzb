@@ -34,16 +34,15 @@ case $city_choice in
         city="Sichuan_333"
         stream="udp/239.93.42.33:5140"
         channel_key="四川电信"
-        url_fofa=$(echo  '"udpxy" && country="CN" && region="Sichuan" && org="CHINA UNICOM China169 Backbone"  && protocol="http"' | base64 |tr -d '\n')
-        url_fofa=$(echo  '"udpxy" && country="CN" && region="Sichuan" && protocol="http"' | base64 |tr -d '\n')
-        url_fofa="https://fofa.info/result?qbase64="$url_fofa
+        url_fofa=$(echo  '"udpxy%20%2Bcountry%3ACN%20%2Bsubdivisions%3A四川"' | base64 |tr -d '\n')
+        url_fofa="https://www.zoomeye.org/searchResult?q="$url_fofa
         ;;
     2)
         city="Beijing_liantong_145"
         stream="rtp/239.3.1.236:2000"
         channel_key="北京联通"
-        url_fofa=$(echo  '"udpxy" && country="CN" && region="Beijing" && org="China Unicom Beijing Province Network" && protocol="http"' | base64 |tr -d '\n')
-        url_fofa="https://fofa.info/result?qbase64="$url_fofa
+        url_fofa=$(echo  'udpxy%20%2Bcountry%3ACN%20%2Bsubdivisions%3A北京' | base64 |tr -d '\n')
+        url_fofa="https://www.zoomeye.org/searchResult?q="$url_fofa
         ;;
 
     0)
