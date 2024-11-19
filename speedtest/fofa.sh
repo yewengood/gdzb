@@ -34,15 +34,11 @@ case $city_choice in
         city="Sichuan_333"
         stream="udp/239.93.42.33:5140"
         channel_key="四川电信"
-        url_fofa=$(echo  '"udpxy%20%2Bcountry%3ACN%20%2Bsubdivisions%3A四川"' | base64 |tr -d '\n')
-        url_fofa="https://www.zoomeye.org/searchResult?q="$url_fofa
         ;;
     2)
         city="Beijing_liantong_145"
         stream="rtp/239.3.1.236:2000"
         channel_key="北京联通"
-        url_fofa=$(echo  'udpxy%20%2Bcountry%3ACN%20%2Bsubdivisions%3A北京' | base64 |tr -d '\n')
-        url_fofa="https://www.zoomeye.org/searchResult?q="$url_fofa
         ;;
 
     0)
@@ -64,14 +60,7 @@ esac
 # 使用城市名作为默认文件名，格式为 CityName.ip
 ipfile="ip/${city}.ip"
 only_good_ip="ip/${city}.onlygood.ip"
-rm -f $only_good_ip
-# 搜索最新 IP
-echo "===============从 fofa 检索 ip+端口================="
-curl -o test.html "$url_fofa"
-#echo $url_fofa
-echo "$ipfile"
-grep -E '^\s*[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+:[0-9]+$' test.html | grep -oE '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+:[0-9]+' > "$ipfile"
-rm -f test.html
+
 # 遍历文件 A 中的每个 IP 地址
 while IFS= read -r ip; do
     # 尝试连接 IP 地址和端口号，并将输出保存到变量中
