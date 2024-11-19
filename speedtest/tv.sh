@@ -1,5 +1,5 @@
-rm -rf ip/liantong.onlygood.ip
-city="liantong"
+rm -rf ip/Beijing.onlygood.ip
+city="Beijing"
 # 使用城市名作为默认文件名，格式为 CityName.ip
 ipfile="ip/${city}.ip"
 only_good_ip="ip/${city}.onlygood.ip"
@@ -33,7 +33,7 @@ time=$(date +%Y%m%d%H%M%S) # 定义 time 变量
 while IFS= read -r line; do
     i=$((i + 1))
     ip="$line"
-    url="http://$ip/rtp/239.0.1.133:5172"
+    url="http://$ip/rtp/239.3.1.236:2000"
     echo "$url"
     curl "$url" --connect-timeout 3 --max-time 10 -o /dev/null >zubo.tmp 2>&1
     a=$(head -n 3 zubo.tmp | awk '{print $NF}' | tail -n 1)
@@ -58,5 +58,7 @@ sed "s/ipipip/$ip2/g" "$program" > tmp2.txt
 sed "s/ipipip/$ip3/g" "$program" > tmp3.txt
 cat tmp1.txt tmp2.txt tmp3.txt > "txt/fofa_${city}.txt"
 rm -rf tmp1.txt tmp2.txt tmp3.txt
-
+#--------------------合并所有城市的txt文件为:   zubo_fofa.txt-----------------------------------------
+echo "📡  北京联通,#genre#" >>bjlt_fofa.txt
+cat txt/fofa_Beijing.txt >>bjlt_fofa.txt
 for a in result/*.txt; do echo "";echo "========================= $(basename "$a") ==================================="; cat $a; done
