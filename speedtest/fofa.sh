@@ -13,8 +13,8 @@ i=0
 
 if [ $# -eq 0 ]; then
   echo "请选择城市："
-   echo "1. 四川电信（Sichuan_333）"
-   echo "2. 北京联通（Beijing_liantong_145）"
+   echo "1. 四川电信（Sichuan）"
+   echo "2. 北京联通（Beijing）"
   echo "0. 全部"
   read -t 10 -p "输入选择或在10秒内无输入将默认选择全部: " city_choice
 
@@ -31,12 +31,12 @@ fi
 case $city_choice in
    
    1)
-        city="Sichuan_333"
+        city="Sichuan"
         stream="udp/239.93.42.33:5140"
         channel_key="四川电信"
         ;;
     2)
-        city="Beijing_liantong_145"
+        city="Beijing"
         stream="rtp/239.3.1.236:2000"
         channel_key="北京联通"
         ;;
