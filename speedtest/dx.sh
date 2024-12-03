@@ -62,4 +62,8 @@ rm -rf gddx_fofa.txt
 #--------------------合并所有城市的txt文件为:   zubo_fofa.txt-----------------------------------------
 echo "📡  电信广电,#genre#" >>gddx_fofa.txt
 cat txt/fofa_dianxin.txt >>gddx_fofa.txt
+echo "📡  四川频道,#genre#" >>gddx_fofa.txt
+cat txt/fofa_Sichuan.txt >>gddx_fofa.txt
+echo "📡  北京联通,#genre#" >>gddx_fofa.txt
+cat txt/fofa_Beijing.txt >>gddx_fofa.txt
 for a in result/*.txt; do echo "";echo "========================= $(basename "$a") ==================================="; cat $a; done
