@@ -122,8 +122,8 @@ rm -rf zubo_fofa.txt
 #--------------------合并所有城市的txt文件为:   zubo_fofa.txt-----------------------------------------
 
 echo "📡  四川频道,#genre#" >>zubo_fofa.txt
-cat txt/fofa_Sichuan_333.txt >>zubo_fofa.txt
+cat txt/fofa_Sichuan.txt >>zubo_fofa.txt
 echo "📡  北京联通,#genre#" >>zubo_fofa.txt
-cat txt/fofa_Beijing_liantong_145.txt >>zubo_fofa.txt
+cat txt/fofa_Beijing.txt >>zubo_fofa.txt
 
 for a in result/*.txt; do echo "";echo "========================= $(basename "$a") ==================================="; cat $a; done
