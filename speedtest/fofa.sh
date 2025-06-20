@@ -1,5 +1,5 @@
-rm -rf ip/beijing.onlygood.ip
-city="beijing"
+rm -rf ip/Beijing.onlygood.ip
+city="Beijing"
 # 使用城市名作为默认文件名，格式为 CityName.ip
 ipfile="ip/${city}.ip"
 only_good_ip="ip/${city}.onlygood.ip"
@@ -58,9 +58,9 @@ sed "s/ipipip/$ip2/g" "$program" > tmp2.txt
 sed "s/ipipip/$ip3/g" "$program" > tmp3.txt
 cat tmp1.txt tmp2.txt tmp3.txt > "txt/fofa_${city}.txt"
 rm -rf tmp1.txt tmp2.txt tmp3.txt
-rm -rf beijing_fofa.txt
+rm -rf Beijing_fofa.txt
 #--------------------合并所有城市的txt文件为:   zubo_fofa.txt-----------------------------------------
 
-echo "📡  北京联通,#genre#" >>beijing_fofa.txt
-cat txt/fofa_Beijing.txt >>beijing_fofa.txt
+echo "📡  北京联通,#genre#" >>Beijing_fofa.txt
+cat txt/fofa_Beijing.txt >>Beijing_fofa.txt
 for a in result/*.txt; do echo "";echo "========================= $(basename "$a") ==================================="; cat $a; done
