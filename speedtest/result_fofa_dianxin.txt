@@ -1,11 +1,6 @@
-67447  pve.cdbackup.cn:8888
-25327  nas.cdbackup.cn:8888
-1064k  xdnas.teop.cn:8189
-991k  xcarchain.com:8888
-747k  marswjf.coralangel.com:7088
-352k  nas.uclive.site:8000
-337k  nas.swes.cn:8089
-324k  nas.yzs10000.com:17777
-252k  izihao.cn:9977
-191k  home.yixi.pro:10043
-135k  uo201.1985001.xyz:66
+948k  xcarchain.com:8888
+368k  home.yixi.pro:10043
+366k  nas.swes.cn:8089
+351k  xdnas.teop.cn:8189
+334k  nas.yzs10000.com:17777
+205k  marswjf.coralangel.com:7088
