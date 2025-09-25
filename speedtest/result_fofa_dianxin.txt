@@ -1,9 +1,4 @@
-1078k  xdnas.teop.cn:8189
-1073k  xdnas.teop.cn:8189
-1073k  xcarchain.com:8888
-353k  nas.yzs10000.com:17777
-331k  nas.yzs10000.com:17777
-237k  izihao.cn:9977
-231k  izihao.cn:9977
-126k  pve.cdbackup.cn:8888
-124k  nas.cdbackup.cn:8888
+1774k  101.93.220.59:5555
+1413k  116.226.100.87:8188
+1362k  58.35.103.119:3333
+741k  180.158.80.106:9998
